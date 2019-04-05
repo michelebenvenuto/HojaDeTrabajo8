@@ -2,13 +2,13 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class main {
+public class mainJCF {
     public static void main(String[] args){
-
-        VectorHeap<Patient> patientsToSee = new VectorHeap<Patient>();
+        PriorityQueue<Patient> patientsToSee= new PriorityQueue<Patient>();
         final int[] numberOfPatients = {0};
         try {
             Stream<String> lines = Files.lines(
@@ -32,5 +32,6 @@ public class main {
             input.nextLine();
             System.out.println(patientsToSee.remove());
         }
+
     }
 }
