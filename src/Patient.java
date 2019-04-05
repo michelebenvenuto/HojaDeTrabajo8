@@ -13,10 +13,10 @@ public class Patient implements Comparable<Patient> {
     public int compareTo(Patient p2) {
         int result = 0;
         if (this.priority<p2.priority) {
-            result= 1;
+            result= -1;
         }
         else if (this.priority> p2.priority) {
-            result = -1;
+            result = 1;
         }
         return result;
     }
